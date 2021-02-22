@@ -9,28 +9,6 @@
   <meta name="description" content="HTML5 website template">
   <meta name="keywords" content="global, template, html, sass, jquery">
   <meta name="author" content="Christites">  
-  <style>
-    @media screen and (min-width: 1000px) {
-      #myVideo {
-        top: -24px;
-        width: 100%;
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        min-width: 100%;
-        min-height: 100%;
-      }
-    }
-
-    @media screen and (max-width: 999px) {
-      #myVideo {
-        height: 100%;
-        top: -24px;
-        bottom: 0;
-      } 
-    }
-
-  </style>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/new_gallery.css">
   <link rel="icon" type="image/png" href="images/logo_shadow.png" />
@@ -40,7 +18,7 @@
 <body onload="setTimer()">
 
   <!-- Loading Video -->
-  <video autoplay muted loop id="myVideo">
+  <video autoplay muted loop id="myVideo" style="z-index: 999999999999999999">
     <source src="intro.mp4" type="video/mp4">
   </video>
 
@@ -82,7 +60,7 @@
     </p>
   </div>
 
-  <div class="perspective effect-rotate-left" id="main-body" style="display: none;">
+  <div class="perspective effect-rotate-left" id="main-body">
     <div class="container">
       <div class="outer-nav--return"></div>
       <div id="viewport" class="l-viewport">
@@ -535,15 +513,11 @@
   <script src="js/particles.min.js"></script>
   <script>
     function setTimer() {
-      document.getElementById("particles-js").style.display = "none";
-      myVar = setTimeout(showPage, 5000);
-      document.getElementById("main-body").style.display = "none";
+      myVar = setTimeout(showPage, 4000);
     }
 
     function showPage() {
       document.getElementById("myVideo").style.display = "none";
-      document.getElementById("particles-js").style.display = "block";
-      document.getElementById("main-body").style.display = "block";
     }
   </script>
   <script type="text/javascript">
