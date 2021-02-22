@@ -15,12 +15,14 @@
   <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
 </head>
 
-<body onload="setTimer()">
+<body>
 
   <!-- Loading Video -->
-  <video autoplay muted loop id="myVideo" style="z-index: 999999999999999999">
-    <source src="intro.mp4" type="video/mp4">
-  </video>
+  <div id="intro-container">
+    <video autoplay muted loop id="myVideo" style="z-index: 999999999999999999">
+      <source src="intro.mp4" type="video/mp4">
+    </video>
+  </div>
 
   <!-- particles.js container -->
   <div id="particles-js"></div>
@@ -511,17 +513,15 @@
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
   <script src="js/functions-min.js"></script>
   <script src="js/particles.min.js"></script>
-  <script>
-    function setTimer() {
-      myVar = setTimeout(showPage, 4000);
-    }
-
-    function showPage() {
-      document.getElementById("myVideo").style.display = "none";
-    }
-  </script>
   <script type="text/javascript">
     $(document).ready(function () {
+      // Intro Video
+      myVar = setTimeout(showPage, 4000);
+
+      function showPage() {
+        document.getElementById("intro-container").style.display = "none";
+      }
+
       // For Intro Text
       var words = ["CHRIST (Deemed to be University), Kengeri Campus, is proud to bring to you the greatest experience you will ever have right from the comfort of your home, Magnovite's first-ever virtual and international edition, Magnovite+ 2021!",
         "Encompassing over 5 Technical events, 9 Management events, 4 Architecture events, 4 Psychology events, and 4 Cultural events, Magnovite+ aims to push all boundaries by presenting a multi-disciplinary approach to innovation and fun!",

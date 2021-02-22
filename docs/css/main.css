@@ -2821,7 +2821,7 @@ border-bottom-right-radius: 12px;
 	}
 }
 
-@media screen and (min-width: 1000px) {
+@media (min-width: 1000px) {
 	#myVideo {
 	  top: -24px;
 	  width: 100%;
@@ -2833,10 +2833,27 @@ border-bottom-right-radius: 12px;
 	}
   }
   
-  @media screen and (max-width: 999px) {
+  @media (max-width: 999px) {
+	#intro-container {
+		position: absolute;
+		z-index: 9;
+		width: 100%;
+		height: 100%;
+		background-color: #270F34;
+	}
+
 	#myVideo {
-	  height: 100%;
-	  top: -24px;
-	  bottom: 0;
+		height: 100%;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	} 
+  }
+
+  @media (max-width: 430px) {
+
+	#myVideo {
+		height: 90%;
 	} 
   }
