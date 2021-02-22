@@ -2820,3 +2820,23 @@ border-bottom-right-radius: 12px;
 		color: #c0c0c0;
 	}
 }
+
+@media screen and (min-width: 1000px) {
+	#myVideo {
+	  top: -24px;
+	  width: 100%;
+	  position: fixed;
+	  right: 0;
+	  bottom: 0;
+	  min-width: 100%;
+	  min-height: 100%;
+	}
+  }
+  
+  @media screen and (max-width: 999px) {
+	#myVideo {
+	  height: 100%;
+	  top: -24px;
+	  bottom: 0;
+	} 
+  }
