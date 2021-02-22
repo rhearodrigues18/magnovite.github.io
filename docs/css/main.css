@@ -2773,8 +2773,8 @@ border-bottom-right-radius: 12px;
 	#arrow_events{
 		display: block;
 		position:absolute;
-		bottom:-25px;
-		left: 45%;
+		bottom:10px;
+		left: 40%;
 		color: #c0c0c0;
 	}
 }
@@ -2815,7 +2815,7 @@ border-bottom-right-radius: 12px;
 	#arrow_contactus{
 		display: block;
 		position:absolute;
-		bottom: 0px;
+		bottom: 10px;
 		left:35%;
 		color: #c0c0c0;
 	}
