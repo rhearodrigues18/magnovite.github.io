@@ -62,7 +62,7 @@
     </p>
   </div>
 
-  <div class="perspective effect-rotate-left" id="main-body">
+  <div class="perspective effect-rotate-left" id="main-body" style="display: none;visibility: hidden;">
     <div class="container">
       <div class="outer-nav--return"></div>
       <div id="viewport" class="l-viewport">
@@ -516,10 +516,12 @@
   <script type="text/javascript">
     $(document).ready(function () {
       // Intro Video
-      myVar = setTimeout(showPage, 4000);
+      myVar = setTimeout(showPage, 4700);
 
       function showPage() {
         document.getElementById("intro-container").style.display = "none";
+        document.getElementById("main-body").style.visibility = "visible";
+        document.getElementById("main-body").style.display = "block";
       }
 
       // For Intro Text
